@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: banking-db-service
+  namespace: banking
+spec:
+  selector:
+    app: banking-db
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432
+  type: ClusterIP
