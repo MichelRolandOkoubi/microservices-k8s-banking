@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: banking-config
+  namespace: banking
+data:
+  DB_HOST: "postgres-banking-db-service"
+  DB_PORT: "5432"
+  DB_NAME: "banking"
+  LOG_LEVEL: "info"
