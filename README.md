@@ -56,3 +56,32 @@ The system consists of:
    ```bash
    kubectl apply -f k8s/api-deployment.yaml -f k8s/api-service.yaml
    ```
+
+   **Get LoadBalancer IP**
+   ```bash
+   kubectl get svc banking-api-service -n banking-prod
+   ```
+
+   **Test API**
+   ```bash
+   curl http://<EXTERNAL-IP>/api/balance
+   ```
+
+
+   **Fonctionnalités présentées**
+   ```bash
+   ✅ Déploiement multi-conteneurs
+   ✅ Découverte de services
+   ✅ Gestion des ConfigMaps et des secrets
+   ✅ Contrôles d'intégrité (sondes de disponibilité et de bon fonctionnement)
+   ✅ Limites et demandes de ressources
+   ✅ Évolutivité horizontale (3 répliques)
+   ✅ Équilibrage de charge
+
+   Stack technologique
+   Kubernetes 1.28+
+   Docker
+   Go (backend API)
+   PostgreSQL (base de données)
+   ```
+
